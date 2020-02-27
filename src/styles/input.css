@@ -1,0 +1,56 @@
+.input {
+  width: 100%;
+  text-align: left;
+  position: relative;
+  margin-top: 30px;
+  display: inline-block;
+}
+
+.input label {
+  position: absolute;
+  top: -27px;
+  left: 0px;
+}
+
+.input input {
+  outline: none;
+  border: 2px solid #00a9e9;
+  border-radius: 10px;
+  font-size: 17px;
+  font-family: 'Baloo', serif;
+  background: transparent;
+  color: #333333;
+  text-align: left;
+  width: calc(100% - 34px);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 15px;
+}
+
+.input select {
+  outline: none;
+  border: 2px solid #00a9e9;
+  border-radius: 10px;
+  font-size: 17px;
+  font-family: 'Baloo', serif;
+  background: transparent;
+  color: #333333;
+  text-align: left;
+  width: calc(100% - 34px);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 15px;
+}
+
+.input textarea {
+  outline: none;
+  border: 2px solid #00a9e9;
+  border-radius: 10px;
+  font-size: 17px;
+  font-family: 'Baloo', serif;
+  background: transparent;
+  color: #333333;
+  text-align: left;
+  width: calc(100% - 34px);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 15px;
+  resize: none;
+}

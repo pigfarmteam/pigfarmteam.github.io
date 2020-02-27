@@ -1,0 +1,60 @@
+body {
+  margin: 0px;
+}
+#app {
+  font-family: 'Baloo', serif;
+  font-size: 17px;
+  color: #333333;
+}
+
+canvas {
+  border: 5px solid #ffffff;
+}
+
+.white { color: white !important; }
+.gray { color: gray !important; }
+.red { color: #F44336 !important; }
+.green { color: #4CAF50 !important; }
+.blue { color: #3498db !important; }
+.yellow { color: rgb(240, 194, 42) !important; }
+.text-center { text-align: center !important; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+
+.fs12 { font-size: 12px !important; }
+.fs15 { font-size: 15px !important; }
+.fs20 { font-size: 20px !important; }
+.fs25 { font-size: 25px !important; }
+.fs30 { font-size: 30px !important; }
+.fs40 { font-size: 40px !important; }
+.fs50 { font-size: 50px !important; }
+
+.op7 { opacity: 0.7 !important; }
+
+.op6 { opacity: 0.6 !important; }
+
+.op5 { opacity: 0.5 !important; }
+
+.mt-10 { margin-top: -10px !important; }
+.mt-15 { margin-top: -15px !important; }
+
+.mt10 { margin-top: 10px !important; }
+
+.mt20 { margin-top: 20px !important; }
+
+.mt30 { margin-top: 30px !important; }
+
+.mt40 { margin-top: 40px !important; }
+
+.mt50 { margin-top: 50px !important; }
+
+.ml10 { margin-left: 10px !important; }
+
+
+.pl10 { padding-left: 10px !important; }
+
+.pr10 { padding-right: 10px !important; }
+
+.pl15 { padding-left: 15px !important; }
+
+.pr15 { padding-right: 15px !important; }
