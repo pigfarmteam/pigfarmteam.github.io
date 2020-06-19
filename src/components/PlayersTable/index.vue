@@ -118,7 +118,7 @@ export default {
         var find = this.bets.find(e => e.index == bet.index);
         if (!find) {
           this.bets.unshift(bet);
-          this.bets = this.bets.slice(0, 16);
+          this.bets = this.bets.slice(0, 13);
         }
       }, 'playerTable');
     },
@@ -133,7 +133,7 @@ export default {
       }, 'playerTable');
     },
     async getOldBet(index) {
-      if (index < 0 || this.bets.length >= 16) return;
+      if (index < 0 || this.bets.length >= 13) return;
 
       var bet = await Contract.get.bet(index)
       bet.index = index;
