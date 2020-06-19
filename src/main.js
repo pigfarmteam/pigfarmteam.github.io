@@ -23,7 +23,7 @@ if (location.search) {
 }
 
 if (window.tomochain) {
-  window.eth = window.tomochain 
+  window.ethereum = window.tomochain 
 }
 
 if (window.tomoWeb3) {
