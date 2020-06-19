@@ -22,6 +22,14 @@ if (location.search) {
   }
 }
 
+if (window.tomochain) {
+  window.eth = window.tomochain 
+}
+
+if (window.tomoWeb3) {
+  window.web3 = window.tomoWeb3
+}
+
 new Vue({
   render: h => h(App),
 }).$mount('#app')
