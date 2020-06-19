@@ -6,17 +6,17 @@
         Connect Your Wallet
       </div>
       <div v-if="status === 'select'">
-        <button class="login-item" @click="connectTomoWallet">
-          <img src="./tomowallet.png" height="50px" />
-          <div>TomoWallet</div>
-        </button>
-        <button class="login-item" @click="() => status = 'privatekey'">
-          <img src="./privatekey.png" height="50px" />
-          <div>Private Key</div>
+        <button class="login-item" @click="connectMetamask">
+          <img src="./pantograph.png" height="50px" />
+          <div>Pantograph</div>
         </button>
         <button class="login-item" @click="connectMetamask">
           <img src="./metamask.png" height="50px" />
           <div>Metamask</div>
+        </button>
+        <button class="login-item" @click="() => status = 'privatekey'">
+          <img src="./privatekey.png" height="50px" />
+          <div>Private Key</div>
         </button>
         <button class="login-item" @click="() => status = 'recoverypharse'">
           <img src="./words.png" height="50px" />
