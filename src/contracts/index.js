@@ -30,7 +30,7 @@ function loginViaPrivateKey(privateKey, hdpath, cb) {
 
 function loginViaMetamask(cb) {
   if (typeof window.web3 == 'undefined') {
-    return cb && cb('MetaMask is not installed')
+    return cb && cb('Wallet is not installed')
   }
 
   web3 = new Web3(window.web3.currentProvider);
@@ -39,10 +39,10 @@ function loginViaMetamask(cb) {
   .then(() => {
     window.web3.eth.getAccounts(function (err, accounts) {
       if (err) {
-        return cb && cb('Have an error with Metamask')
+        return cb && cb('Have an error with Wallet')
       }
       else if (accounts.length === 0) {
-        return cb && cb('Unlock Metamask, please')
+        return cb && cb('Unlock Wallet, please')
       }
       connectStatus = 'metamask';
       address = accounts[0];
