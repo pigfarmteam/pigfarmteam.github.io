@@ -69,7 +69,6 @@ async function checkBetErrorAndTrySettleAgain(cb) {
   clearTimeout(checkBetErrorTimer);
   if (stop) return;
   
-  console.log('[Start] Check bet error');
   try {
     var index = await db.getIndexOfBetError();
     if (!index) {
@@ -109,7 +108,6 @@ async function reCheckBetAndTrySettleAgain(cb) {
   clearTimeout(reCheckBetTimer);
   if (stop) return;
   
-  console.log('[Start] Re-check bet');
   try {
     var numberOfBet = await Contract.get.totalNumberOfBets('0x0000000000000000000000000000000000000000');
     for (var i = numberOfBet - 120; i < numberOfBet - 20; i++) {
@@ -125,7 +123,6 @@ async function reCheckBetAndTrySettleAgain(cb) {
         cb && cb(ex)
       }
     }
-    console.log('[End] Re-check bet');
     
     reCheckBetTimer = setTimeout(() => {
       reCheckBetAndTrySettleAgain(cb)
