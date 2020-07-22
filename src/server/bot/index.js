@@ -50,14 +50,16 @@ async function settle(index, cb) {
     settle(index + 1, cb);
 
     if (!bet.isFinished) {
-      try {
-        await callSettle(bet, index);
-      }
-      catch (ex) {
-        console.log('[Error] Settle error bet:', bet.index);
-        await db.addBetError(bet.index);
-        cb && cb(ex)
-      }
+      setTimeout(async () => {
+        try {
+          await callSettle(bet, index);
+        }
+        catch (ex) {
+          console.log('[Error] Settle error bet:', bet.index);
+          await db.addBetError(bet.index);
+          cb && cb(ex)
+        }
+      }, 15000);
     }
   }
   catch (ex) {
