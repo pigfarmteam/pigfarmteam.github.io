@@ -155,7 +155,7 @@ async function checkTakeProfitAndSettleLeaderBoard(cb) {
     ]);
 
     if (blockNumber > currentRound || blockNumber > takeProfitAtBlock) {
-      console.log('Start take profit');
+      //console.log('Start take profit');
       var hash = await Contract.finishLeaderBoard();
       await Contract.get.checkTx(hash);
       hash = await Contract.takeProfit(),
@@ -230,6 +230,10 @@ module.exports = {
         checkTakeProfitTimer = setTimeout(() => {
           checkTakeProfitAndSettleLeaderBoard(callback);
         }, 10000);
+        
+        setTimeout(() => {
+          callback && callback('restart')
+        }, 10 * 60 * 1000)
       }
       catch (ex) {
         console.error('server > bot > index > 80 >', ex.toString());
