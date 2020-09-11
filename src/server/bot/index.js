@@ -59,7 +59,7 @@ async function settle(index, cb) {
           await db.addBetError(bet.index);
           cb && cb(ex)
         }
-      }, 12000);
+      }, 6000);
     }
   }
   catch (ex) {
